@@ -17,7 +17,7 @@ The setup steps expect the following features to be installed on the system:
 2.1. Clone the repository
 
 ```console
-git clone git@github.com:denisseee/star_project.git
-cd star_project
+git clone git@github.com:denisseee/corsegoo.git
+cd corsegoo
 bundle
 ```
