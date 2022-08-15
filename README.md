@@ -1,24 +1,23 @@
-# README
+# Corsegoo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+App that connect teachers and students on online courses. 
 
-Things you may want to cover:
+## Official page
 
-* Ruby version
+[Corsegoo](https://corsegoo.herokuapp.com/)
 
-* System dependencies
+## 1. Technologies
+The setup steps expect the following features to be installed on the system:
 
-* Configuration
+* Ruby 2.7.2
+* Rails 6.1.0
 
-* Database creation
+## 2. Setup instructions
 
-* Database initialization
+2.1. Clone the repository
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```console
+git clone git@github.com:denisseee/corsegoo.git
+cd corsegoo
+bundle
+```
