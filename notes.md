@@ -17,7 +17,7 @@ git reset --soft HEAD~
 git push -f
 ```
 
-## Bootstrap: Yarn and webpacker
+## Add Bootstrap: Yarn and webpacker
 1. console:
 ```console
 yarn add jquery popper.js bootstrap
@@ -52,3 +52,20 @@ yarn add @popperjs/core
 ```
 Guide: https://blog.corsego.com/rails-6-install-bootstrap-with-webpacker-tldr
 Error case: https://exerror.com/module-not-found-cant-resolve-popper-js/
+
+## Add Fontawesome
+1. console:
+```console
+yarn add @fortawesome/fontawesome-free
+```
+2. javascript/packs/application.js:
+```console
+import "@fortawesome/fontawesome-free/css/all"
+```
+3. Check if it works:
+```console
+Add couple of icons in any .html.erb (view) file:
+<i class="far fa-address-book"></i>
+<i class="fab fa-github"></i>
+```
+Guide: https://blog.corsego.com/rails-6-install-fontawesome-with-webpacker
