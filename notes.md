@@ -174,3 +174,13 @@ def create
   @course.user = current_user
 ```
 Guide: https://github.com/heartcombo/devise
+
+## Add custome messages
+__layouts/_messages.html__
+```ruby
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    %div{:class => "alert alert-#{name.to_s == 'notice' ? 'success' : 'danger'}", :role => "alert"}
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+      = content_tag :div, msg, :id => "flash_#{name}" 
+```
