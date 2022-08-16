@@ -78,3 +78,11 @@ $ rails haml:erb2haml
 https://haml2erb.org/
 https://github.com/haml/haml-rails
 http://html2haml.herokuapp.com/
+
+## Gem simple_form
+```console
+gem 'simple_form'
+bundle install
+rails generate simple_form:install --bootstrap
+```
+Guide: https://github.com/heartcombo/simple_form

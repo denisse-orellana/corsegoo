@@ -57,3 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Cleaner syntax. Read more: https://github.com/haml/haml-rails
 gem "haml-rails", "~> 2.0"
+# To made forms easier. Read more: https://github.com/heartcombo/simple_form
+gem 'simple_form'
