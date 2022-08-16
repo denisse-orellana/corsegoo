@@ -20,3 +20,6 @@ require("stylesheets/application.scss")
 
 // Fontawesome icons
 import "@fortawesome/fontawesome-free/css/all"
+// Rich text
+require("trix")
+require("@rails/actiontext")

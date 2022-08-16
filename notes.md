@@ -1,5 +1,13 @@
 # Notes of the course
 
+## Models
+```console
+rails g scaffold Course title description:text
+
+
+
+```
+
 ## Git reset
 To revert any changes on the last comment
 ```console
@@ -86,3 +94,19 @@ bundle install
 rails generate simple_form:install --bootstrap
 ```
 Guide: https://github.com/heartcombo/simple_form
+
+## Add rich text editor
+```console
+rails action_text:install
+
+__application.js__
+require("trix")
+require("@rails/actiontext")
+
+__actiontext.scss__
+@import "trix/dist/trix";
+
+__courses/form:__
+  = f.label :description
+  = f.rich_text_area :description
+```
