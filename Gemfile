@@ -61,3 +61,5 @@ gem "haml-rails", "~> 2.0"
 gem 'simple_form'
 # A library for generating fake data. Read more: https://github.com/faker-ruby/faker
 gem 'faker'
+# Authentication solution for Rails based on Warden. Read more: https://github.com/heartcombo/devise
+gem 'devise'
