@@ -52,3 +52,12 @@ yarn add @popperjs/core
 ```
 Guide: https://blog.corsego.com/rails-6-install-bootstrap-with-webpacker-tldr
 Error case: https://exerror.com/module-not-found-cant-resolve-popper-js/
+
+## Gem haml
+```console
+gem "haml-rails", "~> 2.0"
+$ rails haml:erb2haml
+```
+https://haml2erb.org/
+https://github.com/haml/haml-rails
+http://html2haml.herokuapp.com/
