@@ -50,3 +50,5 @@ require("stylesheets/application.scss")
 ```console
 yarn add @popperjs/core
 ```
+Guide: https://blog.corsego.com/rails-6-install-bootstrap-with-webpacker-tldr
+Error case: https://exerror.com/module-not-found-cant-resolve-popper-js/
