@@ -33,7 +33,7 @@ mkdir app/javascript/stylesheets
 echo > app/javascript/stylesheets/application.scss
 ```
 2. environment.js:
-```console
+```js
 const { environment } = require('@rails/webpacker')
 const webpack = require("webpack")
 environment.plugins.append("Provide", new webpack.ProvidePlugin({
@@ -49,13 +49,13 @@ module.exports = environment
 = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' 
 ```
 4. application.js:
-```console
+```js
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 require("stylesheets/application.scss")
 ```
 5. add @popperjs/core
-```console
+```js
 yarn add @popperjs/core
 ```
 Guide: https://blog.corsego.com/rails-6-install-bootstrap-with-webpacker-tldr
@@ -117,3 +117,60 @@ gem 'faker'
 rails db:seed
 ```
 https://github.com/faker-ruby/faker
+
+## Gem devise
+```ruby
+gem 'devise'
+bundle install
+rails generate devise:install
+
+config/environments/development.rb:
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+application.html
+  %p.notice= notice
+  %p.alert= alert
+
+rails generate devise User
+rails db:migrate
+
+Rails.application.routes.draw do
+  devise_for :users
+
+rails g migration addUserToCourses user:references
+
+__seed.rb__
+User.create!(
+  email: 'admin@example.com',
+  password: 'password',
+  password_confirmation: 'password'
+)
+30.times do
+  Course.create!([{
+    title: Faker::Educator.course_name,
+    description: Faker::TvShows::GameOfThrones.quote,
+    user_id: User.first.id
+  }])
+
+rails db:drop db:create db:migrate db:seed
+
+__user.rb__
+class User < ApplicationRecord
+  has_many :courses
+  def to_s
+    email
+  end
+
+__course.rb__
+class Course < ApplicationRecord
+  belongs_to :user
+  def to_s
+    title
+  end
+
+__courses_controller.rb__
+def create
+  @course = Course.new(course_params)
+  @course.user = current_user
+```
+Guide: https://github.com/heartcombo/devise
