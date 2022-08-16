@@ -59,3 +59,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "haml-rails", "~> 2.0"
 # To made forms easier. Read more: https://github.com/heartcombo/simple_form
 gem 'simple_form'
+# A library for generating fake data. Read more: https://github.com/faker-ruby/faker
+gem 'faker'

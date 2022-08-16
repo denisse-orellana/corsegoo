@@ -110,3 +110,10 @@ __courses/form:__
   = f.label :description
   = f.rich_text_area :description
 ```
+
+## Gem faker
+```console
+gem 'faker'
+rails db:seed
+```
+https://github.com/faker-ruby/faker
